@@ -1,4 +1,4 @@
-public class transformintotranspose {
+public class RotateMatrixat90deg {
     public static void print(int[][] arr , int m , int n ){
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -26,11 +26,8 @@ public class transformintotranspose {
                 arr[i][b] = temp;
                 a++ ; b--;
             }
-
         }
     }
-
-
     public static void main(String[] args) {
         int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int m = arr.length , n = arr[0].length;
@@ -40,6 +37,4 @@ public class transformintotranspose {
         rev(arr,m,n);
         print(arr,m,n);
     }
-
-
 }

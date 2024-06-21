@@ -11,6 +11,7 @@ public class MultiplicationofMatrices {
         System.out.println();
     }
     public static void main(String[] args) {
+
         int[][] a = {{1,2},{3,4}};
         int m = a.length;
         int n = a[0].length;
@@ -30,14 +31,11 @@ public class MultiplicationofMatrices {
                     for (int k = 0; k < b.length; k++) {
                         c[i][j] += a[i][k] * b[k][j];
                     }
-                    //System.out.print(c[i][j]+" ");
                 }
-                //System.out.println();
             }
             print(a);
             print(b);
             print(c);
-
         }
     }
 }
