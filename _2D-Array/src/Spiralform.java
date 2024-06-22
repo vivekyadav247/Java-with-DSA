@@ -1,5 +1,6 @@
 public class Spiralform {
-    public static void print(int[][] arr , int m , int n ){
+    public static void print(int[][] arr ){
+        int m = arr.length , n = arr[0].length ;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print(arr[i][j]+" ");
@@ -12,10 +13,10 @@ public class Spiralform {
         int[][]  arr = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25},{26,27,28,29,30}};
         int m = arr.length ;
         int n = arr[0].length;
-        print(arr,m,n);
+        print(arr);
         int minr=0 , minc=0 , maxr=m-1, maxc = n-1 ;
 
-        while(minr<=maxr && minc<=maxr){
+        while(minr<=maxr && minc<=maxc){
             //left to right
             for (int j = minc; j <= maxc ; j++) {
                 System.out.print(arr[minr][j]+" ");

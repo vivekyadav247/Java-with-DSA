@@ -9,7 +9,8 @@ public class waveformmatrix2 {
                     System.out.print(arr[i][j] + " ");
                 }
                 System.out.println();
-            } else {
+            }
+            else {
                 for (int j = n - 1; j >= 0; j--) {
                     System.out.print(arr[i][j] + " ");
                 }
