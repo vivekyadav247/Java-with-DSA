@@ -45,6 +45,7 @@ public class ScoreAfterFlip {
                 }
             }
         }
+        print(grid);
         int score = 0;
         int x =1;
         for(int j =grid[0].length-1; j>=0;j--){
