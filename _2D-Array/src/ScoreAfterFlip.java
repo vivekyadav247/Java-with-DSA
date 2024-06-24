@@ -14,7 +14,7 @@ public class ScoreAfterFlip {
         for (int i = 0; i < grid.length; i++) {
             if(grid[i][0]==0){
                 for (int j = 0; j < grid[0].length; j++) {
-                    if(grid[i][j]==0){  
+                    if(grid[i][j]==0){
                         grid[i][j] = 1 ;
                     }
                     else{
@@ -43,7 +43,6 @@ public class ScoreAfterFlip {
                         grid[i][j]=0;
                     }
                 }
-
             }
         }
         print(grid);
