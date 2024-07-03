@@ -1,4 +1,4 @@
-public class Integning {
+public class Interning {
     public static void main(String[] args) {
         String s = "Vivek";
         // If we want to change SDtring
