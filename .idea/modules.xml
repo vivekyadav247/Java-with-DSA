@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basic Sorting/Basic Sorting.iml" filepath="$PROJECT_DIR$/Basic Sorting/Basic Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/Conditionals/Conditionals.iml" filepath="$PROJECT_DIR$/Conditionals/Conditionals.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DRY Codes/DRY Codes.iml" filepath="$PROJECT_DIR$/DRY Codes/DRY Codes.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA with DSA.iml" filepath="$PROJECT_DIR$/JAVA with DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/LOOPS/LOOPS.iml" filepath="$PROJECT_DIR$/LOOPS/LOOPS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leetcode/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode/Leetcode.iml" />
