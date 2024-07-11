@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithm/Basic.iml" filepath="$PROJECT_DIR$/Sorting Algorithm/Basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/Conditionals/Conditionals.iml" filepath="$PROJECT_DIR$/Conditionals/Conditionals.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA with DSA.iml" filepath="$PROJECT_DIR$/JAVA with DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/LOOPS/LOOPS.iml" filepath="$PROJECT_DIR$/LOOPS/LOOPS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leetcode/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode/Leetcode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Basic Sorting/Sorting allgorithm.iml" filepath="$PROJECT_DIR$/Basic Sorting/Sorting allgorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings_Stringbuilders/Strings_Stringbuilders.iml" filepath="$PROJECT_DIR$/Strings_Stringbuilders/Strings_Stringbuilders.iml" />
       <module fileurl="file://$PROJECT_DIR$/_2D-Array/_2D-Array.iml" filepath="$PROJECT_DIR$/_2D-Array/_2D-Array.iml" />
     </modules>
