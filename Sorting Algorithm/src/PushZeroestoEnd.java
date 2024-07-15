@@ -15,7 +15,7 @@ public class PushZeroestoEnd {
             }
         }
         while(count<n){
-            arr[count++] = 0 ; 
+            arr[count++] = 0 ;
         }
         print(arr);
     }
