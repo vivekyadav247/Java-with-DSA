@@ -1,21 +1,31 @@
 import java.util.Scanner ;
+import java.util.List ;
 import java.util.ArrayList ;
 ///// Print all increasing sequences of length k from first n natural number //////
 public class Printallincrease {
-    public static void print(int i , int k , int n,ArrayList<Integer> arr){
-        if(i==n){
-            arr.add(i);
-            return ;
+    public static void generateSequences(int n, int k, int start, List<Integer> current) {
+        // Base case: If the sequence has the required length, print it
+        if (current.size() == k) {
+            System.out.println(current);
+            return;
         }
-        print(i+1.k,n,arr);
+
+        // Generate sequences by choosing the next element from start to n
+        for (int i = start; i <= n; i++) {
+            // Include the current element in the sequence
+            current.add(i);
+            // Recursively generate the next element in the sequence
+            generateSequences(n, k, i + 1, current);
+            // Backtrack by removing the last element added
+            current.remove(current.size() - 1);
+        }
     }
+
     public static void main(String[] args) {
-        Scanner sc =  new Scanner(System.in);
-        System.out.println("Enter n-: ");
-        int n =  sc.nextInt();
-        System.out.println("Enter n-: ");
-        int k =  sc.nextInt();
-        ArrayList<Integer> arr = new ArrayList<>();
-        print(1,k,n,arr);
+        int n = 4;
+        int k = 3;
+
+        System.out.println("All increasing sequences of length " + k + " from first " + n + " natural numbers:");
+        generateSequences(n, k, 1, new ArrayList<>());
     }
 }

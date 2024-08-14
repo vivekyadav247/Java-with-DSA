@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class SubsetofArray {
     static List<List<Integer>> arr = new ArrayList<>(); //global
@@ -12,13 +13,20 @@ public class SubsetofArray {
             arr.add(list);
             return;
         }
+
         Subset(i+1,nums,ans);
         ans.add(nums[i]);
         Subset(i+1,nums,ans);
         ans.remove(ans.size()-1);
     }
     public static void main(String[] args) {
-        int[] nums = {1,2,3};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the length of array -: ");
+        int n = sc.nextInt();
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {
+            nums[i] = sc.nextInt();
+        }
         arr = new ArrayList<>(); //reset
         ArrayList<Integer> ans = new ArrayList<>();
         Subset(0,nums,ans);
