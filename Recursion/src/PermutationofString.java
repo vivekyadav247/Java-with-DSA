@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PermutationofString {
     public static void PermutationStr(String ans , String s){
         if(s.length()==0){
-            System.out.println(ans);
+            System.out.print(ans+", ");
             return ;
         }
         for (int i = 0; i < s.length(); i++) {

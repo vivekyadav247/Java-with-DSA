@@ -3,7 +3,7 @@ import java.util.List ;
 import java.util.ArrayList ;
 ///// Print all increasing sequences of length k from first n natural number //////
 public class Printallincrease {
-    public static void generateSequences(int n, int k, int start, List<Integer> current) {
+    public static void genSeq(int n, int k, int start, List<Integer> current) {
         // Base case: If the sequence has the required length, print it
         if (current.size() == k) {
             System.out.println(current);
@@ -15,7 +15,7 @@ public class Printallincrease {
             // Include the current element in the sequence
             current.add(i);
             // Recursively generate the next element in the sequence
-            generateSequences(n, k, i + 1, current);
+            genSeq(n, k, i + 1, current);
             // Backtrack by removing the last element added
             current.remove(current.size() - 1);
         }
@@ -26,6 +26,6 @@ public class Printallincrease {
         int k = 3;
 
         System.out.println("All increasing sequences of length " + k + " from first " + n + " natural numbers:");
-        generateSequences(n, k, 1, new ArrayList<>());
+        genSeq(n, k, 1, new ArrayList<>());
     }
 }
