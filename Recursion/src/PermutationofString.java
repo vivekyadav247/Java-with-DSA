@@ -15,7 +15,7 @@ public class PermutationofString {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter teh String -: ");
+        System.out.print("Enter the String -: ");
         String s = new String(sc.next());
         PermutationStr("",s);
     }

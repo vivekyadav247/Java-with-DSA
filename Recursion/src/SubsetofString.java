@@ -10,7 +10,7 @@ public class SubsetofString {
         Subset(i+1,s,ans+s.charAt(i)); // take
     }
     public static void main(String[] args) {
-        String s = "ABCD";
+        String s = "aaa";
         arr = new ArrayList<>(); //reset
         Subset(0,s,"");
         System.out.println(arr);
