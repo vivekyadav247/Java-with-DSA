@@ -1,10 +1,5 @@
-public class MergeSort {
-    public static void print(int[] arr){
-        for (int ele : arr ) {
-            System.out.print(ele+" ");
-        }
-        System.out.println();
-    }
+public class InversionCountProblem {
+    static int count = 0 ;
     public static void merge(int[] a, int[] b, int[] c){
         int i = 0, j = 0, k = 0;
         while(i<a.length && j<b.length){
@@ -18,10 +13,19 @@ public class MergeSort {
             while(i<a.length) c[k++] = a[i++];
         }
     }
+    public static void countInversion(int[] a , int[] b){
+        int i = 0 , j = 0 ;
+        while(i<a.length && j<b.length){
+            if(a[i]>b[j]){
+                count += (a.length-i);
+                j++;
+            }
+            else i++;
+        }
+    }
     public static void mergesort(int[] arr){
         int n = arr.length ;
         if(n==1) return ;
-        //create two array
         int[] a = new int[n/2];
         int[] b = new int[n-n/2];
         // copy pasting
@@ -33,15 +37,12 @@ public class MergeSort {
         }
         mergesort(a);
         mergesort(b);
-        // merge these 'a' and 'b'
+        countInversion(a,b);
         merge(a,b,arr);
-        // delete a and b
-        a = null ; b = null ;
     }
     public static void main(String[] args) {
-        int[] arr =  {80,30,50,19,60,10,70,40};
-        print(arr);
+        int[] arr = {8,2,5,3,1,4};
         mergesort(arr);
-        print(arr);
+        System.out.println(count);
     }
 }
