@@ -9,15 +9,12 @@ class Student
 	public void setRollNo(int rollNo){
 		this.rollNo=rollNo;
 	}
-
 	public void setName(String name){
 		this.name =name;
-	}	
-
+	}
 	public void setAddress(String address){
 		this.address =address;
 	}
-
 	//getter methods
 	public int getRollNo(){
 		return rollNo;
