@@ -59,11 +59,12 @@ class BankingApp {
             double y = sc.nextInt();
             double result = acc.Deposit(y);
             if(result==404) System.out.println("Invalid User Id or Password");
-            else System.out.println("Deposit Successfully and remaining balance is :- "+result);
+            else System.out.println("Deposit Successfully and Total balance is :- "+result);
         }
         else if(x==3){
-            if(acc.CheckBalance(x)==404) System.out.println("Invalid User Id or Password");
-            else System.out.println("The account balance is :- "+acc.CheckBalance(x));
+            double result = acc.CheckBalance(x);
+            if(result==404) System.out.println("Invalid User Id or Password");
+            else System.out.println("The account balance is :- "+result);
         }
         else
             System.out.println("Invalid Input");
