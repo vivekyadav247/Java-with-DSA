@@ -43,6 +43,21 @@ class SLL{
         x.next = temp ;
         size++;
     }
+    void deletehead(){
+        if(head==null) throw new Error ("Invalid Size");
+        head = head.next;
+        size--;
+    }
+    void delete(int idx){
+        if(idx<0 || idx>=size) throw new Error("Invalid index");
+        Node temp = head;
+        for (int i = 1; i <= idx-1 ; i++) {
+            temp = temp.next;
+        }
+        if(temp.next==tail) tail = temp ;
+        temp.next = temp.next.next;
+        size--;
+    }
     int get(int idx){
         if(idx==size-1) return tail.val;
         if(idx>=size || idx<0){
@@ -73,7 +88,7 @@ class SLL{
         }
         System.out.println();
     }
-
+    
 }
 public class ImplementationofLL {
     // Implementation of Linked List
@@ -92,6 +107,10 @@ public class ImplementationofLL {
         x.display();
         System.out.println(x.get(3));
         x.set(2,200);
+        x.display();
+        x.deletehead();
+        x.display();
+        x.delete(2);
         x.display();
     }
 }
