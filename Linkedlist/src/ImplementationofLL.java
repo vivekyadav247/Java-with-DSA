@@ -1,7 +1,7 @@
 
 class SLL{
-    private Node head;
-    private Node tail;
+    Node head;
+     Node tail;
     int size;
     void add(int val){
         Node temp = new Node(val);
@@ -31,8 +31,7 @@ class SLL{
             return;
         }
         if(idx>=size || idx<0){
-            System.out.println("Invalid Index");
-            return;
+            throw new Error("Invalid Error0");
         }
         Node temp = new Node(val);
         Node x = head ;
@@ -88,7 +87,7 @@ class SLL{
         }
         System.out.println();
     }
-    
+
 }
 public class ImplementationofLL {
     // Implementation of Linked List
