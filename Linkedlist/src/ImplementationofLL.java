@@ -12,7 +12,16 @@ class SLL{
         }
         size++;
     }
-    void addhead(int val){
+    void insertend(int val){
+        Node temp = new Node(val);
+        if(head==null) head = tail = temp;
+        else{
+            tail.next = temp;
+            tail = temp;
+        }
+        size++;
+    }
+    void inserthead(int val){
         Node temp = new Node(val);
         if(head==null) head = tail = temp;
         else{
@@ -23,11 +32,11 @@ class SLL{
     }
     void insert(int idx, int val){
         if(idx==0) {
-            addhead(val);
+            inserthead(val);
             return;
         }
         if(idx==size){
-            add(val);
+            insertend(val);
             return;
         }
         if(idx>=size || idx<0){
@@ -100,7 +109,7 @@ public class ImplementationofLL {
         x.add(97);
         x.display();
         System.out.println(x.size);
-        x.addhead(1);
+        x.inserthead(1);
         x.display();
         x.insert(3,80);
         x.display();
@@ -110,6 +119,7 @@ public class ImplementationofLL {
         x.deletehead();
         x.display();
         x.delete(2);
+        x.insertend(102);
         x.display();
     }
 }

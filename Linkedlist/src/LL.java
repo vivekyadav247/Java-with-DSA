@@ -62,6 +62,24 @@ class LinkedList{
         }
         x.val = temp.val ;
     }
+    Node merge(Node a, Node b){
+        Node dummy = new Node(100);
+        Node t = dummy;
+        while(a!=null &&  b!=null){
+            if(a.val<=b.val){
+                t.next = a;
+                a = a.next;
+            }
+            else{
+                t.next = b;
+                b = b.next;
+            }
+            t = t.next;
+        }
+        if(a==null) t.next = b;
+        else t.next = a;
+        return dummy.next;
+    }
     void print(){
         Node temp = head;
         while(temp!=null){
