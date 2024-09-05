@@ -80,6 +80,18 @@ class LinkedList{
         else t.next = a;
         return dummy.next;
     }
+    Node reverseList(Node head) {
+        Node curr = head;
+        Node Next = null;
+        Node Prev = null;
+        while(curr!=null){
+            Next = curr.next;
+            curr.next = Prev;
+            Prev = curr;
+            curr = Next;
+        }
+        return Prev;
+    }
     void print(){
         Node temp = head;
         while(temp!=null){
