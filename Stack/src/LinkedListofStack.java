@@ -1,5 +1,3 @@
-
-
 public class LinkedListofStack {
     public static class Node{
         int val;
