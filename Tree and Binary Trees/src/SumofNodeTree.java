@@ -1,12 +1,4 @@
-class Nodes{
-    int val;
-    Nodes left ;
-    Nodes right ;
-    Nodes(int val){
-        this.val = val;
-    }
-}
-public class NodeOfTree {
+public class SumofNodeTree {
     public static void main(String[] args) {
         Nodes a = new Nodes(1);  // a is root Node
         Nodes b = new Nodes(4);
@@ -19,13 +11,12 @@ public class NodeOfTree {
         b.left = d; b.right = e ;
         c.right = f;
 
-        display(a);
+        System.out.println(SumofNodes(a));
     }
-    private static void display(Nodes root){
-        if(root==null) return ;
-        System.out.print(root.val+" ");
-        display(root.left);
-        display(root.right);
-
+    public static int SumofNodes(Nodes root){
+        if(root==null) return 0 ;
+        int sum = 0;
+        sum = root.val+SumofNodes(root.left)+SumofNodes(root.right);
+        return sum ;
     }
 }
