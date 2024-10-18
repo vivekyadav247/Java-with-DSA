@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
 public class LevelorderTraversal2 {
+
     // LEVEL ORDER TRAVERSAL USING NTH LEVEL ( WITHOUT USING QUEUE )
     static int n ;
+    public static int level(Nodes root){
+        if(root==null) return 0 ;
+        return 1+Math.max(level(root.left),level(root.right));
+    }
     public static void main(String[] args) {
         Nodes a = new Nodes(1);  // a is root Node
         Nodes b = new Nodes(2);
@@ -18,12 +23,14 @@ public class LevelorderTraversal2 {
         c.left = f ; c.right = g ;
         g.left = h;
 
-        for (int i = 0; i <= 3; i++) {
+        levelordertravsl(a);
+    }
+    public static void levelordertravsl(Nodes root){
+        for (int i = 0; i < level(root); i++) {
             n = i ;
-            nthlevel(a,0);
+            nthlevel(root,0);
             System.out.println();
         }
-
     }
     public static void nthlevel(Nodes root, int level){
         if(root==null) return ;

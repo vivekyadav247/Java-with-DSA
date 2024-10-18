@@ -3,6 +3,10 @@ import java.util.Queue;
 
 public class LevelOrderTraversal3 {
     static int n ;
+    public static int level(Nodes root){
+        if(root==null) return 0 ;
+        return 1+Math.max(level(root.left),level(root.right));
+    }
     public static void main(String[] args) {
         Nodes a = new Nodes(1);  // a is root Node
         Nodes b = new Nodes(2);
@@ -18,16 +22,19 @@ public class LevelOrderTraversal3 {
         c.left = f ; c.right = g ;
         g.left = h;
 
-        for (int i = 0; i <= 3; i++) {
-            n = i ;
-            nthlevel(a,0);
-            System.out.println();
-        }
-
         levelordertrvsl(a);
-
+        System.out.println();
+        System.out.println("Level Order Traversal using Nth level :- ");
+        levelordertravsl(a);
     }
     // LEVEL ORDER TRAVERSAL USING NTH LEVEL ( Right to Left)
+    public static void levelordertravsl(Nodes root){
+        for (int i = 0; i <= level(root); i++) {
+            n = i ;
+            nthlevel(root,0);
+            System.out.println();
+        }
+    }
     public static void nthlevel(Nodes root, int level){
         if(root==null) return ;
         if(level==n) System.out.print(root.val+" ");
@@ -42,8 +49,8 @@ public class LevelOrderTraversal3 {
         while (!q.isEmpty()){
             Nodes front = q.remove();
             System.out.print(front.val+" ");
-            if(front.left!=null) q.add(front.left);
             if(front.right!=null) q.add(front.right);
+            if(front.left!=null) q.add(front.left);
         }
     }
 }
