@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class setiterate {
     public static void main(String[] args) {
@@ -11,8 +12,17 @@ public class setiterate {
         // In a HashSet for iterate
         // we can only use for each loop
         // because hashset have no index
+        System.out.println("Iterating using For Each Loop:");
         for(int x : set){
             System.out.print(x+" ");
+        }
+        System.out.println();
+
+        System.out.println("Iterating using Iterator:");
+        Iterator<Integer> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Integer element = iterator.next();
+            System.out.print(element+" ");
         }
     }
 }

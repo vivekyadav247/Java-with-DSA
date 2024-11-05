@@ -14,6 +14,7 @@ public class basichashsets {
         System.out.println(set);
         // TC of Size : O(1)
         System.out.println(set.size());
+        System.out.println(set.contains(100));
 
         // Built In function to convert HashSet to Array
         Object[] arr = set.toArray();
