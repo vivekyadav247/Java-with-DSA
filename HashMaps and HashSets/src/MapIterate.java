@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class MapIterate {
     public static void main(String[] args) {
         HashMap<String,Integer> map = new HashMap<>();
-        map.put("Vivek",2407);
+        map.put("Vivek",07);
         map.put("Raghav",76);
         map.put("Raja",82);
         map.put("Kundan",86);
@@ -14,7 +14,7 @@ public class MapIterate {
         // Iterate by KeySet Stl function (More Use)
         for(String key : map.keySet()){
             int val = map.get(key);
-            System.out.println(key+" "+val);
+            System.out.print(key+" "+val+"  ");
         }
         System.out.println();
 
@@ -26,7 +26,7 @@ public class MapIterate {
 
         // Iterate by EntrySet Stl function (Less Use)
         for(Object ele : map.entrySet()){
-            System.out.println(ele);
+            System.out.print(ele+" ");
         }
     }
 }
