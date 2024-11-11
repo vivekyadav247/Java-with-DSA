@@ -37,5 +37,7 @@ public class BasicHeapCollectionFramework {
         pq2.add(34);
         System.out.println(pq2+" "+pq2.peek());
 
+        // Priority Queue with Comparator 
+
     }
 }
