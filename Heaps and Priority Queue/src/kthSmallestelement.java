@@ -13,6 +13,5 @@ public class kthSmallestelement {
             if (pq.size() > k) pq.poll();
         }
         System.out.println(pq.peek());
-
     }
 }
