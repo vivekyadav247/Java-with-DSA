@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class FriendPairingProblem {
+    //// 1-D DP Problems
     static long[] dp ;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
