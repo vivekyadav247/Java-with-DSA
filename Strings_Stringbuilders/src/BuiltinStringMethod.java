@@ -5,4 +5,5 @@ public class BuiltinStringMethod {
         int n = s.length();
         System.out.println(n);
     }
+
 }
