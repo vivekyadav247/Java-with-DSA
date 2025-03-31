@@ -8,7 +8,7 @@ public class MapIterate {
         map.put("Raja",82);
         map.put("Kundan",86);
         map.put("Ritu",15);
-
+        map.put("Vivek",map.getOrDefault("Vivek",0)+1) ;
         //  3 types of iterate in HashMAp using for each loop
 
         // Iterate by KeySet Stl function (More Use)
